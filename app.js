@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const { ObjectId } = require('mongodb')
 const port = (process.env.PORT || 5500)
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://barrycumbie:fr1urj7dVc5OhnuX@cluster0.saltcdu.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.MONGO_URI;
 
 
 
@@ -40,7 +40,7 @@ async function cxnDB(){
 
   try{
     client.connect; 
-    const collection = client.db("barrys-cool-papa-database").collection("dev-profiles");
+    const collection = client.db("Project1").collection("Project1");
     // const collection = client.db("papa").collection("dev-profiles");
     const result = await collection.find().toArray();
     //const result = await collection.findOne(); 
