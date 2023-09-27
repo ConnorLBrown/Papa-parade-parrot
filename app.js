@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const { ObjectId } = require('mongodb')
 const port = (process.env.PORT || 5500)
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const url = process.env.MONGO_uri;
+const uri = process.env.MONGO_URI;
 
 
 
